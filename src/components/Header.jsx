@@ -1,13 +1,19 @@
 import '../App.css';
+import {useState} from 'react';
 
 
 function Header() {
+let [searchQuery, setSearchQuery] = useState('');
+console.log(searchQuery)
+
     return (
     <header className="App-header">
     <div className="reestr-search">
        <i className="img"></i>
        <div className="search">
-           <input placeholder="Поиск"/>
+           <input  value={searchQuery}
+                   onChange={e => setSearchQuery(e.target.value)}
+                   placeholder="Поиск"/>
            <i className="icon-search"></i>
        </div>
    </div>

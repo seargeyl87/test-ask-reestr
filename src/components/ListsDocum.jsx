@@ -21,12 +21,16 @@ function ListsDocum() {
      //console.log(state[0].fieldName)
 
     return (
-        <div classVame="lists-docum">
+        <div className="lists-docum">
         <h2>Документы</h2>
-        <p>количество документов:5</p>
-        <table cellpadding="10" bgcolor="#ffcc00" align="center" width="90%" cellpadding="7">
+        <div className="all-doc">
+        <p>всего документов:</p>
+        <b>5</b>
+        </div>
+        
+        <table cellpadding="10" align="center" width="90%" cellpadding="7">
             <tr>
-                <th></th> 
+                <th>Категория</th> 
                 <th width="30%">Наименование</th>
                 <th>Дата</th>
                 <th>Номер</th>

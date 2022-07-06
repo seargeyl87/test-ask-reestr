@@ -34,7 +34,7 @@
 .App-header .reestr-search .search {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  
   padding: 10px 0px 10px 10px;
   gap: 5px;
   width:270px;
@@ -49,6 +49,7 @@
   background-image: url(img/icon-search.png);
   position: absolute;
   margin-left: 10px;
+  margin-top: 15px;
   
 }
 
@@ -104,21 +105,56 @@
 }
 
 .App .head-info {
+  padding-top: 100px;
+  padding-bottom: 100px;
   display:flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  background: #E5E5E5;
 }
 
 .App .head-info .head-info-txt {
 
   display:flex;
   flex-direction: column;
-  width: 50%;
+  width: 30%;
+  margin-top: 40px;
+}
+.App .head-info .head-info-txt h1{
+  font-size: 48px;
+}
+
+.App .head-info .head-info-txt p {
+  margin-left: 0px;
+}
+
+.App .head-info .head-info-txt button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+  width: 120px;
+  height: 56px;
+  background: #009CB4;
+  border-radius: 5px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.01em;
+  color: #FFFFFF;
 
 }
 
 .App .head-info .head-info-img {
   display:flex;
-  width: 50%;
+
+}
+.head-info .head-info-txt .head-info-search {
+  display: flex;
+  position:relative;
 }
 
 
@@ -128,6 +164,8 @@
   font-style: normal;
   font-size: 14px;
   color: #C6C6C6;
+  width: 330px;
+  height: 56px;
 }
 
 .head-info .head-info-txt .head-info-search .head-info-icon-search {
@@ -135,7 +173,11 @@
   Height:17.57px; 
   background-image: url(img/icon-search.png);
   position: absolute;
-  margin-left: 10px;
+  left: 3.44%;
+  right: 16.2%;
+  top: 30.4%;
+  bottom: 16.42%;
+
 }
 
 .App .head-info .head-info-img {
@@ -152,6 +194,47 @@ th {
   font-size: 16px;
 }
 
+td {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #4D4D4F;
+}
+
+.lists-reestr {
+  max-width: 84%;
+  margin-left: 6%;
+}
+
+.lists-reestr-top {
+  padding-left: 100px;
+  padding-right: 100px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.lists-reestr-top .filter {
+  display: flex;
+  align-items: center;
+}
+
+.lists-reestr-top .filter img{
+  margin-right: 20px;
+}
+
+.news-reestr {
+  display: flex;
+  flex-direction: column;
+  
+  
+  
+}
+
+
 .news-reestr .list-news{
   display: flex;
   Flex-wrap:wrap;
@@ -159,15 +242,71 @@ th {
   margin-left: 30px; 
 }
 
-.news-reestr .list-news .list-news-item {
-  display: flex;
-  Flex-basis:33%;
-  flex-direction: column;
+.news-reestr .show-all {
+display: flex;
+justify-content: center;
 }
 
-.news-reestr .list-news .list-news-item h4, p{
-  margin-left: 40px;
+.news-reestr .show-all button{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 270px;
+  height: 56px;
+  background: #009CB4;
+  border-radius: 5px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.01em;
+  color: #FFFFFF;
+
 }
+
+
+
+.news-reestr .list-news .list-news-item {
+  display: flex;
+  Flex-basis:20%;
+  flex-direction: column;
+  margin-left: 50px;
+}
+
+.news-reestr .list-news .list-news-item h4 {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  color: #231F20;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.news-reestr .list-news .list-news-item p {
+
+  width: 356px;
+  height: 48px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #676A71;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
+
+
 
 .news-reestr .list-news .list-news-item .img{
   position:relative;
@@ -190,21 +329,59 @@ height:220px;
 
 }
 
+.lists-docum {
+   margin-top: 100px;
+}
+
+.lists-docum .all-doc {
+  display: flex;
+}
+
+.lists-docum h2 {
+  margin-left: 80px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 49px;
+  color: #231F20;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.lists-docum p {
+  margin-left: 80px;
+}
+
 .questions {
   display: flex;
   flex-direction:row;
+  background-color: #f1f0f0;
+  padding-top: 50px;
 }
 
 .questions .quest-answer {
-  width: 60%;
+  Flex-basis: 90%;
   text-align: center;
 }
 
 .questions .answer {
-  width: 40%;
+  
   display: flex;
   flex-direction: column;
 }
+.questions .answers h2 {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 49px;
+  color: #231F20;
+
+}
+
+
 .questions .answers h3 {
 font-family: 'Manrope';
 font-style: normal;
@@ -214,16 +391,84 @@ line-height: 25px;
 color: #4D4D4F;
 }
 
+.question-item button {
+
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 25px;
+color: #4D4D4F;
+
+}
+
+.question-item button ul li {
+  font-family: 'Manrope';
+  font-size: 18px;
+}
+
+
 footer {
   display: flex;
   margin-left: 30px;
+  max-width: 85%;
+  margin-left: 4%;
+  padding-top: 80px;
 }
 
 footer .develop {
   display: flex;
   flex-direction: column;
-  flex-basis:30%;
+  flex-basis:33%;
   margin-left: 20px;
+  
+}
+
+footer .develop  p {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #4D4D4F;
+
+}
+
+footer .develop  .agency {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: #676A71;
+
+}
+
+
+footer .develop .adress {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: #A8AAAE;
+}
+
+footer .develop .reestr-po {
+  display: flex;
+  max-width:60%;
+  margin-bottom: 40px;
+  margin-top: 15px;
+  
+}
+
+footer .develop .reestr-po i{
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  color: #676A71;
 }
 
 footer .info {
@@ -231,16 +476,66 @@ footer .info {
   flex-direction: column;
   flex-basis:15%;
   margin-left: 20px;
+  margin-top: 20px;
 
 }
+footer .info h3 {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: #231F20;
+
+}
+
+footer .info li {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: #4D4D4F;
+
+}
+
 
 footer .support {
   display: flex;
   flex-direction: column;
   flex-basis:25%;
   margin-left: 20px;
+  margin-top: 20px;
 
+}
 
+footer .support h3 {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: #231F20;
+}
+
+footer .support p {
+   
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 21px;
+color: #676A71;
+}
+
+footer .support i {
+
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: #4D4D4F;
 }
 
 footer .contact {
@@ -248,7 +543,27 @@ footer .contact {
   flex-direction: column;
   flex-basis:20%;
   margin-left: 20px;
+  margin-top: 20px;
+}
 
+footer .contact h3 {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: #231F20;
+}
+
+footer .contact i {
+  width: 123px;
+  height: 19px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: #4D4D4F;
 
 }
 
@@ -257,4 +572,58 @@ background-image: url(img/Vector.png);
 width:170px;
 height:40px;
 margin-top: 20px;
+}
+
+
+
+
+
+.accordion {
+  background-color: #eee;
+
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.accordion .active {
+  content: '\02795';
+  font-size: 13px;
+
+  float: right;
+  margin-left: 5px;
+}
+
+ 
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+
+}
+
+ .active{
+  max-height: 140px;
+}
+
+
+.accordion:after {
+  content: '\02795'; 
+  font-size: 13px;
+  float: left;
+  margin-left: 5px;
+}
+
+ .active:after {
+  content: "\2796"; 
+  
+  
 }

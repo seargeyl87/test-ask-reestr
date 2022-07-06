@@ -35,7 +35,10 @@ function NewsReestr() {
          state.body.map((item) => <NewsReestrItem item={item}/>
          )} 
            </div>
+           <div className="show-all">
            <button>Показать еще</button>
+           </div>
+          
         </div>
     )
 

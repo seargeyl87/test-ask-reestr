@@ -1,29 +1,29 @@
 import '../App.css';
+import {useState} from 'react';
+import QuestionsItem from './QuestionsItem'
+
 
 
 function Questions() {
+
+    let [isActive, setIsActive] = useState(false);
+    let handleClick = () => {
+    setIsActive(isActive => !isActive);
+  };
+
     return (
         <div className="questions">
-        <div className="quest-answer"><h2>Вопрос-ответ</h2></div>
-        <div className="answers">
-            <h3>Для подачи заявления необходимо подготовить</h3>
-            <ul>
-                <li>Данные для авторизации в личном кабинете</li>
-
-                <li>Квалифицированный сертификат ключа</li>
-                    проверки электронной подписи.
-
-                <li>Сведения, документы и материалы в соответствии 
-                    с Методическими рекомендациями.</li>
-
-                <li>Установить специализированное ПО для подписания 
-                    документов электронной подписью. Подписание 
-                    производится с использованием усиленной квалифицированной 
-                    (отсоединяемой) электронной подписи.</li>
-            </ul>
-            <h3>Связь с оператором реестра</h3>
+             <div className="quest-answer"><h2>Вопрос-ответ</h2></div>
+            <div className="answers">
+                           <QuestionsItem/>
+                           <QuestionsItem/>
+                           <QuestionsItem/>
+                           <QuestionsItem/>
+                           <QuestionsItem/>
+                           <QuestionsItem/>
+                           <QuestionsItem/>
+             </div>
         </div>
-</div>
     )
 
 }

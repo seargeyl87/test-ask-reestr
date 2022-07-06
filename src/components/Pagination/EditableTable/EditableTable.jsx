@@ -3,7 +3,7 @@ import { Form, Table } from "react-bootstrap";
 import './EditableTable.styles.scss';
 import TablePagination from "../TablePagination";
 
-const EditableTable = ({ columns, rows, actions }) => {
+const EditableTable = ({ columns, rows }) => {
   const [isEditMode, setIsEditMode] = useState(false);
   const [rowIDToEdit, setRowIDToEdit] = useState(undefined);
   const [rowsState, setRowsState] = useState(rows);
