@@ -1,0 +1,260 @@
+
+
+.App .App-header {
+  display: flex;
+  Width:1400px;
+  Height:80px;
+  background: #FFFFFF;
+  justify-content: space-between;
+
+}
+.App-header .reestr-search {
+  position: relative;
+  display: flex;
+  Height:80px;
+  width: 50%;
+  margin-left: 80px;
+
+}
+
+
+.App-header .reestr-search i.img{
+  background-image: url(img/Vector.png);
+  margin-top: 15px;
+  width:170px;
+  height:40px;
+ 
+}
+
+.App-header .reestr-search .search input{
+  width: 270px;
+  height: 48px;
+}
+
+.App-header .reestr-search .search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 0px 10px 10px;
+  gap: 5px;
+  width:270px;
+  height:48px;
+  border-radius: 5px;
+  margin-left: 30px;
+}
+
+.App-header .reestr-search .search i.icon-search {
+  Width:17.61px;
+  Height:17.57px; 
+  background-image: url(img/icon-search.png);
+  position: absolute;
+  margin-left: 10px;
+  
+}
+
+
+.App-header .reestr-search .search input {
+  text-indent: 30px;
+
+  font-family: 'Manrope';
+  font-style: normal;
+  font-size: 14px;
+  color: #C6C6C6;
+  
+
+}
+
+
+
+.App-header .cal-not-log {
+  display: flex;
+  height: 80px;
+  width: 50%;
+}
+
+.App-header .cal-not-log i.img-cal{
+  background-image: url(img/cal.png);
+  width:24px;
+  height:25.33px;
+  margin-left: 150px;
+  margin-top: 20px;
+}
+
+.App-header .cal-not-log i.not{
+  background-image: url(img/not.png);
+  width:21.32px;
+  height:26.64px;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.App-header .cal-not-log i.log-user{
+  background-image: url(img/user.png);
+  width:48px;
+  height:48px;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+
+.App-header .cal-not-log p.name-user{
+  font-family: 'Epilogue', sans-serif;
+  margin-left: 10px;
+  margin-top: 23px;
+  size:16px;
+}
+
+.App .head-info {
+  display:flex;
+  justify-content: space-between;
+}
+
+.App .head-info .head-info-txt {
+
+  display:flex;
+  flex-direction: column;
+  width: 50%;
+
+}
+
+.App .head-info .head-info-img {
+  display:flex;
+  width: 50%;
+}
+
+
+.head-info .head-info-txt .head-info-search input {
+  text-indent: 30px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-size: 14px;
+  color: #C6C6C6;
+}
+
+.head-info .head-info-txt .head-info-search .head-info-icon-search {
+  Width:17.61px;
+  Height:17.57px; 
+  background-image: url(img/icon-search.png);
+  position: absolute;
+  margin-left: 10px;
+}
+
+.App .head-info .head-info-img {
+  width:505px;
+  height:502px;
+  background-image: url(img/3d-Office-Work.png);
+
+}
+th {
+  text-align: left;
+  font-family: 'Manrope';
+  color: #009CB4;
+  font-style: normal;
+  font-size: 16px;
+}
+
+.news-reestr .list-news{
+  display: flex;
+  Flex-wrap:wrap;
+  width: 95%;
+  margin-left: 30px; 
+}
+
+.news-reestr .list-news .list-news-item {
+  display: flex;
+  Flex-basis:33%;
+  flex-direction: column;
+}
+
+.news-reestr .list-news .list-news-item h4, p{
+  margin-left: 40px;
+}
+
+.news-reestr .list-news .list-news-item .img{
+  position:relative;
+  width: 370px;
+  height:220px;
+}
+
+
+
+.news-reestr .list-news .list-news-item img{
+width: 370px;
+height:220px;
+
+}
+
+
+.news-reestr .list-news .list-news-item .list-news-item-picture {
+  width: 100%;
+  height:220px;
+
+}
+
+.questions {
+  display: flex;
+  flex-direction:row;
+}
+
+.questions .quest-answer {
+  width: 60%;
+  text-align: center;
+}
+
+.questions .answer {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.questions .answers h3 {
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 25px;
+color: #4D4D4F;
+}
+
+footer {
+  display: flex;
+  margin-left: 30px;
+}
+
+footer .develop {
+  display: flex;
+  flex-direction: column;
+  flex-basis:30%;
+  margin-left: 20px;
+}
+
+footer .info {
+  display: flex;
+  flex-direction: column;
+  flex-basis:15%;
+  margin-left: 20px;
+
+}
+
+footer .support {
+  display: flex;
+  flex-direction: column;
+  flex-basis:25%;
+  margin-left: 20px;
+
+
+}
+
+footer .contact {
+  display: flex;
+  flex-direction: column;
+  flex-basis:20%;
+  margin-left: 20px;
+
+
+}
+
+footer .develop .img{
+background-image: url(img/Vector.png);
+width:170px;
+height:40px;
+margin-top: 20px;
+}

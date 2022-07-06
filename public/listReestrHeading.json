@@ -1,0 +1,8 @@
+[
+    { "field": "id", "fieldName": "Регистрационный номер" },
+    { "field": "name", "fieldName": "Наименование программного обеспечения" },
+    { "field": "code", "fieldName": "Код класса" },
+    { "field": "class", "fieldName": "Класс программного обеспечения" },
+    { "field": "Date", "fieldName": "Дата регистрации" },
+    { "field": "adds", "fieldName": "Адрес сайта" }
+  ]

@@ -1,0 +1,7 @@
+[
+  { "field": "category", "fieldName": "Категория" },
+  { "field": "name", "fieldName": "Наименование" },
+  { "field": "date", "fieldName": "Дата" },
+  { "field": "number", "fieldName": "Номер" },
+  { "field": "content", "fieldName": "Содержение" }
+]
