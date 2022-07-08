@@ -6,19 +6,32 @@ import NewsReestr from './components/NewsReestr';
 import ListsDocum from './components/ListsDocum';
 import Questions from './components/Questions';
 import Footer from './components/Footer';
+import {useState} from 'react';
+import Context from './components/Context';
 
 
 function App() {
 
+  let [searchQuery, setSearchQuery] = useState('');
+  
+  let [stateSearch, setStateSearch] = useState('');
+
+  let changeStateSearch = (filterInfo) => {
+    setStateSearch(filterInfo)
+  }
+
   return (
     <div className="App">
-     <Header/>
-     <HeadInfo/>
-     <ListReestr/> 
-     <NewsReestr/>
-     <ListsDocum/>
-     <Questions/>
-     <Footer/>
+      <Context.Provider value={{searchQuery, setSearchQuery}}>
+          <Header/>
+          <HeadInfo changeStateSearch={changeStateSearch}/>
+          <ListReestr stateSearch={stateSearch}/> 
+          <NewsReestr/>
+          <ListsDocum/>
+          <Questions/>
+          <Footer/>
+      </Context.Provider>
+
 
        
     </div>

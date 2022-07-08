@@ -1,17 +1,20 @@
 import '../App.css';
-import {useState} from 'react';
+import { useContext} from 'react';
+import Context from './Context';
+
 
 
 function Header() {
-let [searchQuery, setSearchQuery] = useState('');
-console.log(searchQuery)
+
+    let {searchQuery, setSearchQuery} =  useContext(Context);
 
     return (
     <header className="App-header">
     <div className="reestr-search">
        <i className="img"></i>
        <div className="search">
-           <input  value={searchQuery}
+           <input 
+                   value={searchQuery}
                    onChange={e => setSearchQuery(e.target.value)}
                    placeholder="Поиск"/>
            <i className="icon-search"></i>

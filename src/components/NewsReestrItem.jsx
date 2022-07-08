@@ -2,7 +2,6 @@ import '../App.css';
 import React from 'react';
 
 
-
 function NewsReestrItem(props) {
 
     return (
@@ -13,10 +12,8 @@ function NewsReestrItem(props) {
              <h4>{props.item.headingNews}</h4>
              <p>{props.item.description}</p> 
       </div>
-   
         
     )
-
 }
 
 export default NewsReestrItem;

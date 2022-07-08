@@ -4,23 +4,22 @@ import {useState} from 'react';
 
 
 
-function QuestionsItem() {
+function QuestionsItem({quest}) {
 
     let [isActive, setIsActive] = useState(false);
     let handleClick = event => {
     setIsActive(isActive => !isActive);
   };
-
     return (
         
                             <div className="question-item">
-                            <button className={!isActive ? 'accordion' : 'accordion active'} onClick={handleClick}>Для подачи заявления необходимо подготовить</button>
+                            <button className={!isActive ? 'accordion' : 'accordion active'} onClick={handleClick}>{quest.question}</button>
                                     <div className={!isActive ? 'panel' : 'panel active'} onClick={handleClick}  >
                                         <ul>
-                                            <li>Данные для авторизации в личном кабинете</li>
-                                            <li>Квалифицированный сертификат ключа проверки электронной подписи.</li>
-                                            <li>Сведения, документы и материалы в соответствии с Методическими рекомендациями.</li>
-                                            <li>Установить специализированное ПО для подписания документов электронной подписью. Подписание производится с использованием усиленной квалифицированной (отсоединяемой) электронной подписи.</li>
+                                            <li>{quest.answer1}</li>
+                                            <li>{quest.answer2}</li>
+                                            <li>{quest.answer3}</li>
+                                            <li>{quest.answer4}</li>
                                         </ul>
                                     </div>
                             </div>

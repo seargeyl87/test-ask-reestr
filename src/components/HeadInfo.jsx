@@ -1,7 +1,17 @@
 import '../App.css';
+import axios from 'axios';
+import {useState} from 'react';
 
 
-function HeadInfo() {
+function HeadInfo({changeStateSearch}) {
+    let [state, setState] = useState('');
+    let  getFilterList = async () => {
+        let response = await axios.get('listReestrInfoFilter.json');
+        if(state) {        
+                   changeStateSearch(response.data)
+                }
+     }
+
     return (
         <div className="head-info">
         <div className="head-info-txt">
@@ -11,8 +21,11 @@ function HeadInfo() {
           <p>Правообладателей: 4272</p>
           <div className="head-info-search">
               <i className="head-info-icon-search"></i>
-              <input placeholder="Искать реестр"/>
-              <button>Искать</button>
+              <input 
+                     placeholder="Искать реестр" 
+                     value={state}
+                     onChange={e => setState(e.target.value)}/>
+              <button onClick={getFilterList}>Искать</button>
           </div>
         </div>
         <div className="head-info-img">

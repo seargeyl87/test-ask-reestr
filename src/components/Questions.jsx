@@ -1,27 +1,27 @@
 import '../App.css';
-import {useState} from 'react';
 import QuestionsItem from './QuestionsItem'
-
+import axios from 'axios';
+import {useState, useEffect} from 'react';
 
 
 function Questions() {
 
-    let [isActive, setIsActive] = useState(false);
-    let handleClick = () => {
-    setIsActive(isActive => !isActive);
-  };
+  let [state, setState] = useState([]);
+
+      let  getData = async () => {
+        let response = await axios.get('questions.json');
+        setState(response.data);
+        }
+      useEffect(() => {
+        getData();
+    }, [])  
 
     return (
         <div className="questions">
              <div className="quest-answer"><h2>Вопрос-ответ</h2></div>
             <div className="answers">
-                           <QuestionsItem/>
-                           <QuestionsItem/>
-                           <QuestionsItem/>
-                           <QuestionsItem/>
-                           <QuestionsItem/>
-                           <QuestionsItem/>
-                           <QuestionsItem/>
+              {state.map((quest, index) => <QuestionsItem quest={quest} key={index}/>)}
+                           
              </div>
         </div>
     )

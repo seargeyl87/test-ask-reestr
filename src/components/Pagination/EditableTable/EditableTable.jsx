@@ -1,34 +1,56 @@
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {useEffect, useMemo, useState, useContext} from 'react';
 import { Form, Table } from "react-bootstrap";
 import './EditableTable.styles.scss';
 import TablePagination from "../TablePagination";
+import Context from '../../Context';
 
-const EditableTable = ({ columns, rows }) => {
-  const [isEditMode, setIsEditMode] = useState(false);
-  const [rowIDToEdit, setRowIDToEdit] = useState(undefined);
-  const [rowsState, setRowsState] = useState(rows);
-  const [editedRow, setEditedRow] = useState();
-
-  const [pageSize, setPageSize] = useState(10);
-  const [currentPage, setCurrentPage] = useState(1);
+let EditableTable = ({ columns, rows, row , stateSearch}) => {
+  let {searchQuery, setSearchQuery} =  useContext(Context);
+  let [isEditMode, setIsEditMode] = useState(false);
+  let [rowIDToEdit, setRowIDToEdit] = useState(undefined);
+  let [rowsState, setRowsState] = useState(rows);
+  let [editedRow, setEditedRow] = useState();
+  let [pageSize, setPageSize] = useState(10);
+  let [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     if (currentPage >= rows.length / pageSize)
       setCurrentPage(1);
-  }, [pageSize])
+   }, [pageSize])
+
+  useEffect(() => {
+    if(stateSearch) {
+     setPageSize(5);
+   } else {
+     setPageSize(10)
+   }
+ 
+   }, [stateSearch]);
+
+  useEffect(() => {
+     if(searchQuery) {
+      setPageSize(5);
+    } else {
+        setPageSize(10)
+    }
+    
+    }, [searchQuery]);
+
+
+
 
   useMemo(() => {
-    const firstPageIndex = (currentPage - 1) * pageSize;
-    const lastPageIndex = firstPageIndex + pageSize;
+    let firstPageIndex = (currentPage - 1) * pageSize;
+    let lastPageIndex = firstPageIndex + pageSize;
 
-    const newData = rows.slice(firstPageIndex, lastPageIndex);
+    let newData = rows.slice(firstPageIndex, lastPageIndex);
 
     setRowsState(newData);
   }, [currentPage, pageSize]);
 
 
-  const handleOnChangeField = (e, rowID) => {
-    const { name: fieldName, value } = e.target;
+  let handleOnChangeField = (e, rowID) => {
+    let { name: fieldName, value } = e.target;
 
     setEditedRow({
       id: rowID,

@@ -1,24 +1,21 @@
 import '../App.css';
 import axios from 'axios';
 import {useState, useEffect} from 'react';
+import ListsDocumItem from './ListsDocumItem';
 
 
 function ListsDocum() {
 
     let [state, setState] = useState([]);
-
     let  getData = async () => {
-        let response = await axios.get('docHeading.json');
+        let response = await axios.get('doc.json');
         setState(response.data);
-        console.log(response.data)
+    
              }
 
          useEffect(() => {
-           
          getData()
-       
-     }, []) 
-     //console.log(state[0].fieldName)
+     }, [])   
 
     return (
         <div className="lists-docum">
@@ -36,10 +33,8 @@ function ListsDocum() {
                 <th>Номер</th>
                 <th>Содержение</th>
             </tr>
-            <tr><td>Общие документы</td><td>Постановление Правительства Российской федерации от 20.07.2021 "О внесении изменений в постановление Правительства Российской Федерации от 16 ноября 2015 г. №1236</td><td>20.07.2021</td><td>1226</td><td>Скачать</td></tr>
-            <tr><td>Общие документы</td><td>Постановление Правительства Российской федерации от 20.07.2021 "О внесении изменений в постановление Правительства Российской Федерации от 16 ноября 2015 г. №1236</td><td>20.07.2021</td><td>1226</td><td>Скачать</td></tr>
-            <tr><td>Общие документы</td><td>Постановление Правительства Российской федерации от 20.07.2021 "О внесении изменений в постановление Правительства Российской Федерации от 16 ноября 2015 г. №1236</td><td>20.07.2021</td><td>1226</td><td>Скачать</td></tr>
-
+            {state.map((itemDoc, index) => <ListsDocumItem itemDoc={itemDoc} key={index}/>)}
+        
         </table>
       </div>
     )
